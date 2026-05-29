@@ -78,7 +78,7 @@ model.compile(loss="sparse_categorical_crossentropy",
 
 early_stop = EarlyStopping(
     monitor='val_accuracy',  # 监控
-    patience=200,  # n轮不提升停止
+    patience=100,  # n轮不提升停止
     restore_best_weights=True  # 恢复最好模型
 )
 model.fit(train_data,
